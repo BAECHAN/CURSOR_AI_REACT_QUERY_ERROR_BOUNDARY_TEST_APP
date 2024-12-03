@@ -7,6 +7,8 @@ export interface Todo {
 }
 
 export const fetchTodos = async (): Promise<Todo[]> => {
-  const { data } = await axios.get("http://localhost:8080/api/todos");
+  const { data } = await axios.get(
+    "https://jsonplaceholder.typicode.com/todos"
+  );
   return data;
 };
